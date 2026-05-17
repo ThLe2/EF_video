@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le calcul de l'impôt — Vidéo TMK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --prune:#8C1E70;
+    --prune-clair:#B14E96;
+    --charbon:#2A2530;
+    --charbon-doux:#4A4350;
+    --or:#C9A14A;
+    --creme:#FBF8F4;
+    --creme-2:#F2EBE2;
+    --blanc:#FFFFFF;
+    --gris-ligne:#E3DAD0;
+    --vert:#3E7C5A;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--creme);
+    color:var(--charbon);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    padding:0 0 60px;
+  }
+  .bandeau{
+    background:linear-gradient(135deg,var(--prune) 0%,#6E1659 100%);
+    color:var(--blanc);
+    padding:38px 28px 44px;
+    position:relative;
+    overflow:hidden;
+  }
+  .bandeau::after{
+    content:"";position:absolute;right:-60px;top:-60px;
+    width:240px;height:240px;border-radius:50%;
+    background:rgba(201,161,74,.18);
+  }
+  .wrap{max-width:860px;margin:0 auto;}
+  .kicker{
+    font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--or);font-weight:600;margin-bottom:10px;
+  }
+  h1{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:2.15rem;line-height:1.15;
+  }
+  .sous-titre{margin-top:10px;opacity:.85;font-size:1rem;max-width:560px;}
+  main{max-width:860px;margin:-22px auto 0;padding:0 28px;}
+  .carte{
+    background:var(--blanc);border:1px solid var(--gris-ligne);
+    border-radius:14px;padding:24px 22px;margin-bottom:22px;
+    box-shadow:0 8px 28px -18px rgba(42,37,48,.4);
+  }
+  .carte.player{padding:0;overflow:hidden;}
+  /* --- player YouTube responsive --- */
+  .yt-frame{
+    position:relative;padding-bottom:56.25%;height:0;
+    overflow:hidden;background:#000;
+  }
+  .yt-frame iframe{
+    position:absolute;top:0;left:0;width:100%;height:100%;border:0;
+  }
+  .alerte{
+    display:flex;gap:12px;align-items:flex-start;
+    border-radius:10px;padding:14px 16px;margin-bottom:22px;font-size:.93rem;
+  }
+  .alerte.good{
+    background:#EAF3EE;border:1px solid #BfDcCB;
+  }
+  .alerte-icon{font-size:1.15rem;line-height:1.2;}
+  .alerte-titre{
+    display:block;font-weight:600;color:var(--charbon);margin-bottom:2px;
+  }
+  h2{
+    font-family:'Fraunces',serif;font-weight:600;font-size:1.3rem;
+    color:var(--prune);margin-bottom:8px;
+  }
+  /* --- bloc code embed --- */
+  .code-block{
+    background:#241F2A;border-radius:12px;overflow:hidden;
+    margin-top:6px;
+  }
+  .code-header{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:10px 14px;background:#322B3A;
+  }
+  .code-lang{
+    color:var(--or);font-size:.78rem;font-weight:600;
+    letter-spacing:.04em;
+  }
+  .copy-btn{
+    background:var(--prune);color:var(--blanc);border:0;
+    border-radius:6px;padding:6px 14px;font-size:.8rem;
+    font-family:'Inter',sans-serif;font-weight:600;cursor:pointer;
+    transition:background .15s;
+  }
+  .copy-btn:hover{background:var(--prune-clair);}
+  pre{
+    margin:0;padding:16px 14px;overflow-x:auto;
+    font-family:'Consolas','Monaco',monospace;font-size:.82rem;
+    line-height:1.6;color:#E8E2EF;
+  }
+  .hl-cmt{color:#8B8094;}
+  .hl-tag{color:#C98BB9;}
+  .hl-attr{color:var(--or);}
+  .hl-val{color:#9CCFA8;}
+  .hl-url{color:#F0C674;font-weight:600;}
+  footer{
+    max-width:860px;margin:30px auto 0;padding:18px 28px;
+    border-top:1px solid var(--gris-ligne);
+    font-size:.82rem;color:var(--charbon-doux);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+  }
+  footer .marque{font-family:'Fraunces',serif;color:var(--prune);font-weight:600;}
+  @media(max-width:560px){
+    h1{font-size:1.7rem;}
+    main,.bandeau,footer{padding-left:18px;padding-right:18px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="bandeau">
+  <div class="wrap">
+    <div class="kicker">Droit fiscal · Vidéo pédagogique</div>
+    <h1>Le calcul de l'impôt<br>sur le revenu</h1>
+    <p class="sous-titre">Une vidéo explicative pour comprendre, étape par étape, comment l'impôt sur le revenu est déterminé.</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- PLAYER YOUTUBE -->
+  <section class="carte player">
+    <div class="yt-frame">
+      <iframe
+        src="https://www.youtube.com/embed/m3wYc5luX6c"
+        allowfullscreen
+        loading="lazy"
+        title="Le calcul de l'impôt sur le revenu — TMK Performances"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- ALERTE SUCCÈS -->
+  <div class="alerte good">
+    <span class="alerte-icon">✅</span>
+    <div>
+      <span class="alerte-titre">Vidéo hébergée sur YouTube — TMK Performances</span>
+      La vidéo est disponible sur la chaîne YouTube TMK Performances. Pour l'intégrer dans une autre page HTML de votre LMS, copiez le code ci-dessous.
+    </div>
+  </div>
+
+  <!-- CODE EMBED PRÊT À COPIER -->
+  <section class="carte">
+    <h2>Code d'intégration</h2>
+    <div class="code-block">
+      <div class="code-header">
+        <span class="code-lang">HTML — Embed YouTube prêt à coller</span>
+        <button class="copy-btn" onclick="copyCode(this, 'code-yt')">Copier</button>
+      </div>
+      <pre id="code-yt"><span class="hl-cmt">&lt;!-- Embed YouTube — Le calcul de l'impôt — TMK Performances --&gt;</span>
+<span class="hl-tag">&lt;div</span> <span class="hl-attr">style</span>=<span class="hl-val">"position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;iframe</span>
+    <span class="hl-attr">src</span>=<span class="hl-val">"https://www.youtube.com/embed/<span class="hl-url">m3wYc5luX6c</span>"</span>
+    <span class="hl-attr">style</span>=<span class="hl-val">"position:absolute;top:0;left:0;width:100%;height:100%;border:0;"</span>
+    <span class="hl-attr">allowfullscreen</span>
+    <span class="hl-attr">loading</span>=<span class="hl-val">"lazy"</span>
+    <span class="hl-attr">title</span>=<span class="hl-val">"Le calcul de l'impôt sur le revenu"</span>
+    <span class="hl-attr">allow</span>=<span class="hl-val">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"</span>
+  <span class="hl-tag">&gt;&lt;/iframe&gt;</span>
+<span class="hl-tag">&lt;/div&gt;</span></pre>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span class="marque">TMK Performances</span>
+  <span>Vidéo pédagogique · Droit fiscal</span>
+</footer>
+
+<script>
+function copyCode(btn, id){
+  const pre = document.getElementById(id);
+  const text = pre.innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const ancien = btn.textContent;
+    btn.textContent = '✓ Copié !';
+    setTimeout(() => { btn.textContent = ancien; }, 2000);
+  }).catch(() => {
+    btn.textContent = 'Erreur';
+    setTimeout(() => { btn.textContent = 'Copier'; }, 2000);
+  });
+}
+</script>
+
+</body>
+</html>
